@@ -55,7 +55,7 @@ resource "ibm_resource_group" "demo_group1" {
 
 resource "ibm_resource_instance" "cos_instance" {
   name              = "demo_cos_instance"
-  resource_group_id = ibm_resource_group.demo_group1.id
+  resource_group_id = "8c8fe6db25dc43639e4b3bc9a1abdb50"
   service           = "cloud-object-storage"
   plan              = "standard"
   location          = "global"
