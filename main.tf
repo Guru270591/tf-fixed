@@ -19,11 +19,11 @@ resource "ibm_resource_group" "demo_group1" {
 #   location = "us-south"
 # }
 
-# resource "ibm_kp_key" "cos_encrypt" {
-#   key_protect_id  = ibm_resource_instance.kp_instance.guid
-#   key_name     = "key-name"
-#   standard_key = false
-# }
+resource "ibm_kp_key" "cos_encrypt" {
+  key_protect_id  = ibm_resource_instance.kp_instance.guid
+  key_name     = "key-name"
+  standard_key = false
+}
 
 # #****************************************
 # #provision CIS
