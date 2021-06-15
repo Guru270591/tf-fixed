@@ -2,12 +2,12 @@ provider "ibm" {
   generation = 2
 }
 
-# #*********************************************
-# # Resource group creation
-# #*********************************************
-# resource "ibm_resource_group" "demo_group1" {
-#   name     = var.rg_name
-# }
+#*********************************************
+# Resource group creation
+#*********************************************
+resource "ibm_resource_group" "demo_group1" {
+  name     = var.rg_name
+}
 
 # #*********************************************
 # #KMS
