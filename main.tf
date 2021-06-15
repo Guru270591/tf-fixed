@@ -12,12 +12,12 @@ resource "ibm_resource_group" "demo_group1" {
 # #*********************************************
 # #KMS
 # #*********************************************
-# resource "ibm_resource_instance" "kp_instance" {
-#   name     = "demo_KMS_instance"
-#   service  = "kms"
-#   plan     = "tiered-pricing" 
-#   location = "us-south"
-# }
+resource "ibm_resource_instance" "kp_instance" {
+  name     = "demo_KMS_instance"
+  service  = "kms"
+  plan     = "tiered-pricing" 
+  location = "us-south"
+}
 
 resource "ibm_kp_key" "cos_encrypt" {
   key_protect_id  = ibm_resource_instance.kp_instance.guid
